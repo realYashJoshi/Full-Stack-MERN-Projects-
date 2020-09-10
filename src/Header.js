@@ -4,9 +4,16 @@ import SearchIcon from "@material-ui/icons/Search";
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
+import { auth } from "./firebase";
 
 const Header = (props) => {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
+
+  const handleAuthentication = () => {
+    if (user) {
+      auth.signOut();
+    }
+  };
 
   return (
     <div className="header">
@@ -24,10 +31,14 @@ const Header = (props) => {
       </div>
 
       <div className="header_nav">
-        <div className="header_option">
-          <span className="header_option_line_one">Hello Guest</span>
-          <span className="header_option_line_two">Sign in</span>
-        </div>
+        <Link to={!user && "/login"}>
+          <div onClick={handleAuthentication} className="header_option">
+            <span className="header_option_line_one">Hello {user?.email}</span>
+            <span className="header_option_line_two">
+              {user ? "Sign Out" : "Sign in"}
+            </span>
+          </div>
+        </Link>
 
         <div className="header_option">
           <span className="header_option_line_one">Returns</span>
