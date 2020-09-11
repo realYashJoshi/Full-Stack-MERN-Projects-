@@ -13,12 +13,21 @@ To do this:
 
 1. If you haven't done so, you'll need to install Node.js. You can do so by going to [the node.js website](https://nodejs.org/en/ "Node js website")
 2. Npm comes packaged with node but additional packages you will need to install are
+   FRONTEND
    - firebase
    - dotenv
    - react-router-dom
    - material-ui/core
    - material-ui/icons
    - react-currency-format
+   - @stripe/stripe-js
+   - @stripe/react-stripe-js
+   - axios
+   - moment
+     BACKEND
+   - express
+   - cors
+   - stripe
 3. To set up firebase, go to the [firebase website](https://firebase.google.com/)
    1. If you haven't done so, make an account
    2. Create a new project and name it (Make sure you tick firebase hosting)

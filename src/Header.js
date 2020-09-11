@@ -33,17 +33,21 @@ const Header = (props) => {
       <div className="header_nav">
         <Link to={!user && "/login"}>
           <div onClick={handleAuthentication} className="header_option">
-            <span className="header_option_line_one">Hello {user?.email}</span>
+            <span className="header_option_line_one">
+              Hello {!user ? "Guest" : user.email}
+            </span>
             <span className="header_option_line_two">
               {user ? "Sign Out" : "Sign in"}
             </span>
           </div>
         </Link>
 
-        <div className="header_option">
-          <span className="header_option_line_one">Returns</span>
-          <span className="header_option_line_two">& Orders</span>
-        </div>
+        <Link to="/orders">
+          <div className="header_option">
+            <span className="header_option_line_one">Returns</span>
+            <span className="header_option_line_two">& Orders</span>
+          </div>
+        </Link>
 
         <div className="header_option">
           <span className="header_option_line_one">Your</span>

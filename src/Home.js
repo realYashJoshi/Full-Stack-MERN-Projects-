@@ -22,9 +22,9 @@ const Home = (props) => {
           />
           <Product
             id="450958"
-            title="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"
-            price={239.99}
-            image="https://images-na.ssl-images-amazon.com/images/I/810%2BGNdkzKL._AC_SX450_.jpg"
+            title="New Apple MacBook Pro (16-inch, 16GB RAM, 512GB Storage, 2.6GHz Intel Core i7) - Space Gray"
+            price={2099.0}
+            image="https://m.media-amazon.com/images/I/71pC69I3lzL._AC_UY218_.jpg"
             rating={4}
           />
         </div>
