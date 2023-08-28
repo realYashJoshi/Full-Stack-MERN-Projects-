@@ -1,6 +1,4 @@
-Project made by Simon He with reference to [Clever Programmer](https://www.youtube.com/watch?v=0kiykrN9_Ng&list=PL-J2q3Ga50oNQP__onO64kAHX_z0BdLv6 "Amazon Clone Challenege link")
 
-Versions:
 
 - Node: v12.18.1
 - Npm: 6.12.1
